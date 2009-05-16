@@ -122,7 +122,7 @@ public class ConfigPanel extends PopupDialog {
 		sectionClient.setLayout(new GridLayout());
 		section.setClient(sectionClient);
 		
-		for(String moduleName: daemon.getAvailableModules()) {
+		for(String moduleName: daemon.getInstalledModules()) {
 			addModule(moduleName, sectionClient);
 		}
 	}

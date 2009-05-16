@@ -25,7 +25,7 @@ public class WebSpiderDaemonStub implements IWebSpiderDaemon {
 	private  final BlockingQueue<IProbeMessage> sendQueue;
 	private final Thread sendThread;
 	
-	private Set<String> availableModules;
+	private Set<String> installedModules;
 	private WebSpiderConfiguration configuration;
 	private Object lock = new Object();
 	
@@ -47,9 +47,9 @@ public class WebSpiderDaemonStub implements IWebSpiderDaemon {
 		refreshStatus();
 	}
 	
-	public Set<String> getAvailableModules() {
+	public Set<String> getInstalledModules() {
 		synchronized(lock) {
-			while(availableModules == null) {
+			while(installedModules == null) {
 				try {
 					lock.wait();
 				} catch (InterruptedException e) {
@@ -58,7 +58,7 @@ public class WebSpiderDaemonStub implements IWebSpiderDaemon {
 				}
 			}
 			
-			return availableModules;
+			return installedModules;
 		}
 	}
 
@@ -265,13 +265,13 @@ public class WebSpiderDaemonStub implements IWebSpiderDaemon {
 		Thread t = new Thread(new Runnable() {
 			public void run() {
 				waitForEmptySendQueue();
-				final GetAvailableModules response = (GetAvailableModules) exchangeMessage(new GetAvailableModules());
+				final GetInstalledModules response = (GetInstalledModules) exchangeMessage(new GetInstalledModules());
 				if(response == null) {
 					logger.warning("Failed to get available modules: " + getLastError());
 					return;
 				}
 				synchronized(lock) {
-					availableModules = response.getModules();
+					installedModules = response.getModules();
 					lock.notifyAll();
 				}
 			}

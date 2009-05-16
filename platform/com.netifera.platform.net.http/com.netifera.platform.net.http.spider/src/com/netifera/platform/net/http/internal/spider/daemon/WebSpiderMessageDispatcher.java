@@ -9,7 +9,7 @@ import com.netifera.platform.api.dispatcher.IProbeMessage;
 import com.netifera.platform.api.dispatcher.MessengerException;
 import com.netifera.platform.api.log.ILogger;
 import com.netifera.platform.net.http.internal.spider.daemon.remote.FetchURL;
-import com.netifera.platform.net.http.internal.spider.daemon.remote.GetAvailableModules;
+import com.netifera.platform.net.http.internal.spider.daemon.remote.GetInstalledModules;
 import com.netifera.platform.net.http.internal.spider.daemon.remote.GetSpiderConfiguration;
 import com.netifera.platform.net.http.internal.spider.daemon.remote.GetSpiderStatus;
 import com.netifera.platform.net.http.internal.spider.daemon.remote.SetSpiderConfiguration;
@@ -54,7 +54,7 @@ public class WebSpiderMessageDispatcher {
 			}
 		};
 		
-		dispatcher.registerMessageHandler(GetAvailableModules.ID, msgHandler);
+		dispatcher.registerMessageHandler(GetInstalledModules.ID, msgHandler);
 		dispatcher.registerMessageHandler(GetSpiderConfiguration.ID, msgHandler);
 		dispatcher.registerMessageHandler(SetSpiderConfiguration.ID, msgHandler);
 		dispatcher.registerMessageHandler(StartSpider.ID, msgHandler);
@@ -65,8 +65,8 @@ public class WebSpiderMessageDispatcher {
 	}
 	
 	private void dispatch(IMessenger messenger, IProbeMessage message) throws DispatchMismatchException, MessengerException {
-		if(message instanceof GetAvailableModules) {
-			handler.getAvailableModules(messenger, (GetAvailableModules) message);
+		if(message instanceof GetInstalledModules) {
+			handler.getInstalledModules(messenger, (GetInstalledModules) message);
 		} else if(message instanceof GetSpiderConfiguration) {
 			handler.getSpiderConfiguration(messenger, (GetSpiderConfiguration) message);
 		} else if(message instanceof SetSpiderConfiguration) {

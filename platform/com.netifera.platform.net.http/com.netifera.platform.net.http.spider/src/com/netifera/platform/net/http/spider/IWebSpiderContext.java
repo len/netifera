@@ -2,18 +2,13 @@ package com.netifera.platform.net.http.spider;
 
 import java.net.URI;
 
-import com.netifera.platform.api.log.ILogger;
+import com.netifera.platform.api.daemon.IModuleContext;
 import com.netifera.platform.util.locators.TCPSocketLocator;
 
-public interface IWebSpiderContext {
+public interface IWebSpiderContext extends IModuleContext {
 
 	TCPSocketLocator getSocketLocator();
 	URI getBaseURL();
 
-	long getRealm();
-	long getSpaceId();
-
 	IWebSpider getSpider();
-	
-	ILogger getLogger();
 }

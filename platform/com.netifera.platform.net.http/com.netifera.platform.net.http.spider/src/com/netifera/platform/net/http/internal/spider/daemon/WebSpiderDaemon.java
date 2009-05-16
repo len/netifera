@@ -17,7 +17,7 @@ import com.netifera.platform.api.log.ILogger;
 import com.netifera.platform.api.probe.IProbeManagerService;
 import com.netifera.platform.net.dns.service.nameresolver.INameResolver;
 import com.netifera.platform.net.http.internal.spider.daemon.remote.FetchURL;
-import com.netifera.platform.net.http.internal.spider.daemon.remote.GetAvailableModules;
+import com.netifera.platform.net.http.internal.spider.daemon.remote.GetInstalledModules;
 import com.netifera.platform.net.http.internal.spider.daemon.remote.GetSpiderConfiguration;
 import com.netifera.platform.net.http.internal.spider.daemon.remote.GetSpiderStatus;
 import com.netifera.platform.net.http.internal.spider.daemon.remote.SetSpiderConfiguration;
@@ -119,7 +119,7 @@ public class WebSpiderDaemon implements IWebSpiderMessageHandler {
 
 	/* Message Handlers */
 
-	public void getAvailableModules(IMessenger messenger, GetAvailableModules msg) throws MessengerException {
+	public void getInstalledModules(IMessenger messenger, GetInstalledModules msg) throws MessengerException {
 		Set<String> moduleNames = new HashSet<String>();
 		for (IWebSpiderModule module: modules)
 			moduleNames.add(module.getName());
