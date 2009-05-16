@@ -1,5 +1,6 @@
 package com.netifera.platform.net.internal.daemon.sniffing;
 
+import com.netifera.platform.api.log.ILogger;
 import com.netifera.platform.net.daemon.sniffing.module.IStreamModuleContext;
 import com.netifera.platform.net.sniffing.stream.ISessionContext;
 import com.netifera.platform.net.sniffing.stream.ISessionKey;
@@ -30,8 +31,13 @@ public class StreamModuleContext implements IStreamModuleContext {
 			return -1;
 		return ((Long)o).longValue();
 	}
+	
 	public long getSpaceId() {
 		return spaceId;
 	}
 
+	public ILogger getLogger() {
+		//TODO
+		return null;
+	}
 }

@@ -1,6 +1,8 @@
 package com.netifera.platform.net.daemon.sniffing.module;
 
-public interface IModuleContext {
+import com.netifera.platform.api.daemon.IModuleContext;
+
+public interface ISniffingContext extends IModuleContext {
 	/**
 	 * Print a string to the UI console.
 	 * 

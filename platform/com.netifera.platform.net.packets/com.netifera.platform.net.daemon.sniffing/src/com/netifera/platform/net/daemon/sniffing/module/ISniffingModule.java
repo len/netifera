@@ -1,5 +1,6 @@
 package com.netifera.platform.net.daemon.sniffing.module;
 
+import com.netifera.platform.api.daemon.IModule;
 import com.netifera.platform.net.sniffing.IPacketFilter;
 
 /**
@@ -25,7 +26,7 @@ import com.netifera.platform.net.sniffing.IPacketFilter;
  * @see ITCPStreamSniffer
  *
  */
-public interface ISniffingModule {
+public interface ISniffingModule extends IModule {
 	
 	/**
 	 * Return a <code>String</code> which describes this sniffing module. This

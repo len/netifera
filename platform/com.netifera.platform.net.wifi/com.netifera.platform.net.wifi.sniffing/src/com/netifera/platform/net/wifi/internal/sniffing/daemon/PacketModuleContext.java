@@ -1,5 +1,6 @@
 package com.netifera.platform.net.wifi.internal.sniffing.daemon;
 
+import com.netifera.platform.api.log.ILogger;
 import com.netifera.platform.net.daemon.sniffing.module.IPacketModuleContext;
 import com.netifera.platform.net.pcap.ICaptureHeader;
 import com.netifera.platform.net.sniffing.IPacketContext;
@@ -41,5 +42,8 @@ public class PacketModuleContext implements IPacketModuleContext {
 		packetContext.abortProcessing();		
 	}
 
-
+	public ILogger getLogger() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

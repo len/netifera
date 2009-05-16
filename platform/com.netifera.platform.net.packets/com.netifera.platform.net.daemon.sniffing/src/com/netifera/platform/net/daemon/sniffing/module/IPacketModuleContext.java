@@ -7,7 +7,7 @@ import com.netifera.platform.net.pcap.ICaptureHeader;
  * a method to allow sniffing daemon modules to print output to the console in
  * the UI.
  */
-public interface IPacketModuleContext extends IModuleContext {
+public interface IPacketModuleContext extends ISniffingContext {
 	
 	/**
 	 * Return the capture header for this packet.

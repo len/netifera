@@ -8,7 +8,7 @@ import com.netifera.platform.net.sniffing.stream.ISessionKey;
  * a method to allow sniffing daemon modules to print output to the console in
  * the UI.
  */
-public interface IStreamModuleContext extends IModuleContext {
+public interface IStreamModuleContext extends ISniffingContext {
 	/**
 	 * Print a string to the UI console.
 	 *  

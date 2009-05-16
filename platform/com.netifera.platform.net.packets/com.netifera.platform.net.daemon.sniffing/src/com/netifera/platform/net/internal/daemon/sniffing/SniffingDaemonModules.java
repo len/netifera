@@ -137,8 +137,6 @@ public class SniffingDaemonModules {
 		}
 	}
 	
-	
-	
 	public boolean isRunning() {
 		return isRunning;
 	}
