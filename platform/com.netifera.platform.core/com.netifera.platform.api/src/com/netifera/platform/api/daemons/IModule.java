@@ -1,4 +1,4 @@
-package com.netifera.platform.api.daemon;
+package com.netifera.platform.api.daemons;
 
 public interface IModule {
 

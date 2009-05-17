@@ -9,7 +9,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ActivationPolicy: lazy
-Import-Package: com.netifera.platform.api.daemon,
+Import-Package: com.netifera.platform.api.daemons,
  com.netifera.platform.api.events,
  com.netifera.platform.api.log,
  com.netifera.platform.api.model,

@@ -1,6 +1,6 @@
 package com.netifera.platform.net.http.spider.daemon;
 
-import com.netifera.platform.api.daemon.IModularDaemon;
+import com.netifera.platform.api.daemons.IModularDaemon;
 import com.netifera.platform.net.http.internal.spider.daemon.remote.WebSpiderConfiguration;
 import com.netifera.platform.net.http.spider.IWebSpider;
 import com.netifera.platform.net.http.spider.impl.WebSite;

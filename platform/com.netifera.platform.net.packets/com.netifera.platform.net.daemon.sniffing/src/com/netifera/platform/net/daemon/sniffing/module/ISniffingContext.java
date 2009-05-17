@@ -1,6 +1,6 @@
 package com.netifera.platform.net.daemon.sniffing.module;
 
-import com.netifera.platform.api.daemon.IModuleContext;
+import com.netifera.platform.api.daemons.IModuleContext;
 
 public interface ISniffingContext extends IModuleContext {
 	/**

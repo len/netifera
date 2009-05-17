@@ -1,6 +1,6 @@
 package com.netifera.platform.net.daemon.sniffing.module;
 
-import com.netifera.platform.api.daemon.IModule;
+import com.netifera.platform.api.daemons.IModule;
 import com.netifera.platform.net.sniffing.IPacketFilter;
 
 /**

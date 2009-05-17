@@ -5,7 +5,7 @@ Bundle-SymbolicName: com.netifera.platform.net.http.spider
 Bundle-Version: 1.0.0
 Bundle-Vendor: netifera
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Import-Package: com.netifera.platform.api.daemon,
+Import-Package: com.netifera.platform.api.daemons,
  com.netifera.platform.api.dispatcher,
  com.netifera.platform.api.events,
  com.netifera.platform.api.log,

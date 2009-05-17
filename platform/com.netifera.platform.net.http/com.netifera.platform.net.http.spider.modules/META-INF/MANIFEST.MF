@@ -6,7 +6,7 @@ Bundle-Version: 1.0.0
 Bundle-Activator: com.netifera.platform.net.http.spider.modules.Activator
 Bundle-Vendor: netifera
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Import-Package: com.netifera.platform.api.daemon,
+Import-Package: com.netifera.platform.api.daemons,
  com.netifera.platform.api.log,
  com.netifera.platform.api.model,
  com.netifera.platform.net.dns.model,

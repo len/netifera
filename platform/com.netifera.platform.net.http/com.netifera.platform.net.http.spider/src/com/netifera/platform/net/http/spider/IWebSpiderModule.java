@@ -1,6 +1,6 @@
 package com.netifera.platform.net.http.spider;
 
-import com.netifera.platform.api.daemon.IModule;
+import com.netifera.platform.api.daemons.IModule;
 
 public interface IWebSpiderModule extends IModule {
 	void start(IWebSpiderContext context);
